@@ -38,7 +38,7 @@
   "tm_in": [
    0.08
   ],
-  "smallest_in": 0.107
+  "smallest_in": 0.1
  },
  "emotional-support-stop-loss__sticker": {
   "tm_in": [
@@ -51,5 +51,17 @@
    0.08
   ],
   "smallest_in": 0.07
+ },
+ "good-dog-bad-entry__hangtag_front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.073
+ },
+ "good-dog-bad-entry__hangtag_back": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.063
  }
 }

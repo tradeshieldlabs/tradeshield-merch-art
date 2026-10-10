@@ -18,7 +18,11 @@ def tee_front(name,draw,lines,size=400,foot=None):
     c=C(3600,4800,300); y=draw(c)
     y=slogan_lines(c,1800,y+90,lines,size,fitw=3000)
     if foot: y+=40; c.text(foot,'SemiBold',125,1800,y+150,WH,track=0.18,anchor='c'); y+=150
-    c.lockup(1800,y+230,300,'MERCH'); c.save(name)
+    c.lockup(1800,y+230,300,'MERCH'); fit_save(c,name)
+def fit_save(c,name,tw=3150,maxh=4560):
+    c.save(name); bb=Image.open(f'{OUT}/{name}.png').getbbox(); x0,y0,x1,y1=bb
+    k=min(tw/(x1-x0),maxh/(y1-y0)); tx=1800-k*(x0+x1)/2; ty=120-k*y0
+    c.el=[f'<g transform="translate({tx:.1f},{ty:.1f}) scale({k:.4f})">']+c.el+['</g>']; c.save(name)
 
 # 1 Brutus Ate My Revenge Trade
 def d1(c):
@@ -70,18 +74,18 @@ tee_front('sit-stay-dont-click-buy__front',d3,[('SIT. STAY.',WH),("DON'T CLICK B
 back_std('tee__back_std_r2')
 
 # 4 Trucker: Good Dog. Bad Entry. (embroidery 1770x600, cyan/white/red threads)
-c=C(1770,600,300)
-c.shield(150,150,300)
-slogan_lines(c,1000,95,[('GOOD DOG.',WH),('BAD ENTRY.',CY)],190,lh=1.18,fitw=1250)
-candle(c,1640,250,430,200,480,52,RED,14)
+c=C(1770,600,300); AQ='#3399FF'; TR='#CC3333'
+c.shield(150,150,300,col=AQ)
+slogan_lines(c,1000,95,[('GOOD DOG.',WH),('BAD ENTRY.',AQ)],190,lh=1.18,fitw=1250)
+candle(c,1640,250,430,200,480,52,TR,14)
 c.save('good-dog-bad-entry__trucker_front')
 
 # mugs 2250x925 full wrap navy. left panel = joke, right = lockup + tagline
 def mug(name,draw,lines,size=120):
-    c=C(2250,925,300); R(c,0,0,2250,925,NV)
-    c.el.append('<g transform="translate(-60,-20) scale(1.12)">'); draw(c); c.el.append('</g>')
-    slogan_lines(c,560,620,lines,size,lh=1.14,fitw=940)
-    c.lockup(1690,130,170,'MERCH'); c.tagline(1690,420,95); c.save(name)
+    c=C(2250,925,300)
+    c.el.append('<g transform="translate(150,40) scale(0.8)">'); draw(c); c.el.append('</g>')
+    slogan_lines(c,560,520,lines,size,lh=1.12,fitw=640)
+    c.lockup(1690,170,150,'MERCH'); c.tagline(1690,420,80); c.save(name)
 def m1(c):
     P(c,'M140 200H980',stroke=WH,sw=10); c.text('MARKET FLOOR','SemiBold',34,150,180,WH,track=0.2)
     pts='M150 120L330 150L470 110L600 180L690 470'
@@ -90,13 +94,13 @@ def m1(c):
     P(c,'M690 470V540H770V500H850V460H930V420H990',stroke=AC,sw=10)
     for i,t in enumerate(['B1','B2','B3']): c.text(t,'Bold',40,520,300+i*80,AC)
     candle(c,700,400,500,380,520,40,RED,8)
-mug('bought-the-dip-basement__mug',m1,[('BOUGHT THE DIP.',WH),('IT HAD A BASEMENT.',CY)],105)
+mug('bought-the-dip-basement__mug',m1,[('BOUGHT THE DIP.',WH),('IT HAD A',CY),('BASEMENT.',CY)],90)
 def m2(c):
     steps=[('DAY 1','SCALP'),('DAY 3','SWING'),('DAY 30','INVESTMENT'),('DAY 300','HEIRLOOM')]
     for i,(a,b) in enumerate(steps):
         y=130+i*95; c.text(a,'Bold',44,170,y,AC,track=0.08); c.text(b,'ExtraBold',56,400,y,RED if i==3 else WH)
     P(c,'M820 110L880 190L930 260L980 420',stroke=CY,sw=12)
-mug('accidental-long-term-investor__mug',m2,[('ACCIDENTAL',WH),('LONG-TERM INVESTOR',CY)],105)
+mug('accidental-long-term-investor__mug',m2,[('ACCIDENTAL',WH),('LONG-TERM',CY),('INVESTOR.',CY)],90)
 
 # stickers 4x4 (1200x1200) navy die w/ lockup + tagline
 def sticker(name,draw,lines,size=120):
@@ -120,4 +124,8 @@ def s2(c):
     y=slogan_lines(c,600,70+h+30,[('DROP IT.',CY)],150)
     c.text('BRUTUS, ON YOUR BAGS','SemiBold',44,600,y+40,WH,track=0.15,anchor='c'); return y+60
 sticker('drop-it-brutus__sticker',s2,[],110)
+c=C(600,1050,300); R(c,0,0,600,1050,NV); c.el.append(f'<circle cx="300" cy="80" r="28" fill="none" stroke="{CY}" stroke-width="5"/>')
+c.lockup(300,200,110,'MERCH'); slogan_lines(c,300,420,[('GOOD DOG.',WH),('BAD ENTRY.',CY)],80,fitw=480); c.text('tradeshieldlabs.com','Medium',34,300,980,CY,anchor='c'); c.save('good-dog-bad-entry__hangtag_front')
+c=C(600,1050,300); R(c,0,0,600,1050,NV); c.el.append(f'<circle cx="300" cy="80" r="28" fill="none" stroke="{CY}" stroke-width="5"/>')
+c.tagline(300,330,62,lh=1.4); c.rule(300,620,300,8); c.text('EMBROIDERED FOR TRADERS','SemiBold',26,300,720,WH,track=0.15,anchor='c'); c.text('WHO KNOW BETTER.','SemiBold',26,300,770,WH,track=0.15,anchor='c'); c.save('good-dog-bad-entry__hangtag_back')
 json.dump(LOG,open(OUT+'/tm-log.json','w'),indent=1); print(json.dumps(LOG))
