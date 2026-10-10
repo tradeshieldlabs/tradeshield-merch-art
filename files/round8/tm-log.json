@@ -295,6 +295,19 @@
   ],
   "smallest_in": 0.399
  },
+ "founders__hoodie_back_crest": {
+  "tm_in": [
+   0.08,
+   0.082
+  ],
+  "smallest_in": 0.2
+ },
+ "founders__hoodie_front_crest": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.2
+ },
  "journal__cover": {
   "tm_in": [
    0.08
