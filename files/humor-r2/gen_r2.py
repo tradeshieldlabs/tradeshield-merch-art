@@ -14,8 +14,9 @@ def P(c,d,fill='none',stroke=None,sw=0,extra=''):
     c.el.append(f'<path d="{d}" fill="{fill}"'+(f' stroke="{stroke}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round"' if stroke else '')+f' {extra}/>')
 def candle(c,x,yt,yb,wt,wb,w,col,sw):
     P(c,f'M{x} {wt}V{wb}',stroke=col,sw=sw); R(c,x-w/2,yt,w,yb-yt,col,rx=w*0.08)
-def tee_front(name,draw,lines,size=400,foot=None):
-    c=C(3600,4800,300); y=draw(c)
+def tee_front(name,draw,lines,size=400,foot=None,k=1.0):
+    c=C(3600,4800,300); n=len(c.el); y=draw(c)
+    c.el=c.el[:n]+[f'<g transform="translate({1800-1800*k:.1f},{300-300*k:.1f}) scale({k})">']+c.el[n:]+['</g>']; y=300+(y-300)*k
     y=slogan_lines(c,1800,y+90,lines,size,fitw=3000)
     if foot: y+=40; c.text(foot,'SemiBold',125,1800,y+150,WH,track=0.18,anchor='c'); y+=150
     c.lockup(1800,y+230,300,'MERCH'); fit_save(c,name)
@@ -42,7 +43,7 @@ def d1(c):
     c.el.append('</g>')
     for i,(dx,dy) in enumerate([(-90,-40),(1170,40),(1120,-120)]): R(c,x0+dx,y0+hh+dy,46,28,WH,rx=8,extra=f'transform="rotate({30*i-20} {x0+dx} {y0+hh+dy})"')
     return 300+h+340
-tee_front('brutus-ate-my-revenge-trade__front',d1,[('BRUTUS ATE MY',WH),('REVENGE TRADE.',CY)],380,foot='GOOD BOY. NO NOTES.')
+tee_front('brutus-ate-my-revenge-trade__front',d1,[('BRUTUS ATE MY',WH),('REVENGE TRADE.',CY)],380,foot='GOOD BOY. NO NOTES.',k=1.65)
 
 # 2 Just A Pullback (Day 47)
 def d2(c):
@@ -58,7 +59,7 @@ def d2(c):
     for k in range(5): P(c,f'M{560+k*70} {2140}l0 -230',stroke=AC,sw=26)
     P(c,'M520 2110L900 1940',stroke=AC,sw=26)
     return 2200
-tee_front('just-a-pullback-day-47__front',d2,[("IT'S JUST A",WH),('PULLBACK.',CY)],430,foot='(DAY 47)')
+tee_front('just-a-pullback-day-47__front',d2,[("IT'S JUST A",WH),('PULLBACK.',CY)],430,foot='(DAY 47)',k=1.15)
 
 # 3 Sit. Stay. Don't Click Buy.
 def d3(c):
@@ -70,7 +71,7 @@ def d3(c):
     px,py=2330,by+40
     for dx,dy,r in [(0,90,95),(-120,-30,48),(-40,-90,48),(60,-90,48),(140,-30,48)]: c.el.append(f'<circle cx="{px+dx}" cy="{py+dy}" r="{r}" fill="{WH}"/>')
     return by+380+60
-tee_front('sit-stay-dont-click-buy__front',d3,[('SIT. STAY.',WH),("DON'T CLICK BUY.",CY)],360)
+tee_front('sit-stay-dont-click-buy__front',d3,[('SIT. STAY.',WH),("DON'T CLICK BUY.",CY)],360,k=1.7)
 back_std('tee__back_std_r2')
 
 # 4 Trucker: Good Dog. Bad Entry. (embroidery 1770x600, cyan/white/red threads)
@@ -83,8 +84,8 @@ c.save('good-dog-bad-entry__trucker_front')
 # mugs 2250x925 full wrap navy. left panel = joke, right = lockup + tagline
 def mug(name,draw,lines,size=120):
     c=C(2250,925,300)
-    c.el.append('<g transform="translate(150,40) scale(0.8)">'); draw(c); c.el.append('</g>')
-    slogan_lines(c,560,520,lines,size,lh=1.12,fitw=640)
+    c.el.append('<g transform="translate(40,40) scale(0.72)">'); draw(c); c.el.append('</g>')
+    slogan_lines(c,400,500,lines,size,lh=1.12,fitw=500)
     c.lockup(1690,170,150,'MERCH'); c.tagline(1690,420,80); c.save(name)
 def m1(c):
     P(c,'M140 200H980',stroke=WH,sw=10); c.text('MARKET FLOOR','SemiBold',34,150,180,WH,track=0.2)
