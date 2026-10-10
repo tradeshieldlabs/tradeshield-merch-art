@@ -275,6 +275,36 @@
   ],
   "smallest_in": 0.113
  },
+ "mug__staff-ceo-buck": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__staff-admin": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__staff-mod-vibe-checker": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__staff-mod-capitulate": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__staff-mod-report-fud": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
  "straw-tumbler__wrap": {
   "tm_in": [
    0.08
