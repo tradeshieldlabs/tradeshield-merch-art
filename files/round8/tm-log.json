@@ -229,9 +229,9 @@
  },
  "puff-hat__front_lockup": {
   "tm_in": [
-   0.091
+   0.08
   ],
-  "smallest_in": 0.28
+  "smallest_in": 0.22
  },
  "mug__coffee-before-charts": {
   "tm_in": [
