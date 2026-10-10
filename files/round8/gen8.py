@@ -92,7 +92,7 @@ def back_std(name,sub='MERCH'):
     c=C(3600,4800,300); c.lockup(1800,500,520,sub); c.tagline(1800,1350,250)
     c.text('tradeshieldlabs.com','Medium',120,1800,2420,CY,anchor='c'); c.save(name)
 def left_chest(name,sub='MERCH'):
-    c=C(3600,4800,300); c.lockup(2350,700,300,sub,anchor='l'); c.save(name)
+    c=C(3600,4800,300); c.lockup(3350,700,300,sub,anchor='r'); c.save(name)
 def slogan_front(name,lines,sub='MERCH',size=430,brutus=None,foot=None):
     c=C(3600,4800,300); y=420
     if brutus: h=c.image(BRUTUS+brutus,1800-800,y,1600); y+=h+120
