@@ -1,0 +1,310 @@
+{
+ "network-awareness-over-hype__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "network-brutus-approved__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "network-see-what-traders-are-seeing__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "network-the-network-saw-it-first__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "network-patience-is-a-position__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "network-signal-over-noise__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "network-built-for-the-network-hoodie__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "network-network-intelligence-unit-hoodie__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "network-signal-crew-hoodie__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "risk-manager-tee__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "side-eye-before-buy-tee__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "no-dumb-trades-hoodie__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "brutus-approved-tee__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "cso-hoodie__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "ask-shield-iq-tee__front": {
+  "tm_in": [
+   0.08,
+   0.204
+  ],
+  "smallest_in": 0.22
+ },
+ "humor-revenge-trading__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "humor-risk-managed__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "humor-trade-the-plan__front": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "cso-hoodie__back": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "tee__back_std": {
+  "tm_in": [
+   0.098,
+   0.112
+  ],
+  "smallest_in": 0.291
+ },
+ "hoodie__back_std": {
+  "tm_in": [
+   0.098,
+   0.112
+  ],
+  "smallest_in": 0.291
+ },
+ "tee__back_std_network": {
+  "tm_in": [
+   0.098,
+   0.112
+  ],
+  "smallest_in": 0.291
+ },
+ "tee__front_LC": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.2
+ },
+ "hoodie__front_LC": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.2
+ },
+ "tee__front_LC_network": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.2
+ },
+ "staff-admin__tee_back": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "staff-mod__tee_back_M1-vibe-checker": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "staff-mod__tee_back_M2-capitulate": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "staff-mod__tee_back_M3-report-fud": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "staff-ceo__hoodie_back_buck": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.22
+ },
+ "staff-ceo__hoodie_back_crest": {
+  "tm_in": [
+   0.08,
+   0.086
+  ],
+  "smallest_in": 0.22
+ },
+ "founders__hoodie_back": {
+  "tm_in": [
+   0.08,
+   0.086
+  ],
+  "smallest_in": 0.22
+ },
+ "polo__chest_lockup": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.127
+ },
+ "polo__sleeve_ceo": {
+  "tm_in": [],
+  "smallest_in": 0.485
+ },
+ "cso-hat__front": {
+  "tm_in": [],
+  "smallest_in": 0.442
+ },
+ "verified-signal-hat__front": {
+  "tm_in": [],
+  "smallest_in": 0.442
+ },
+ "rumor-control-hat__front": {
+  "tm_in": [],
+  "smallest_in": 0.442
+ },
+ "stay-aware-hat__front": {
+  "tm_in": [],
+  "smallest_in": 0.442
+ },
+ "trucker__brutus-said-wait": {
+  "tm_in": [],
+  "smallest_in": 0.442
+ },
+ "puff-hat__front_lockup": {
+  "tm_in": [
+   0.091
+  ],
+  "smallest_in": 0.28
+ },
+ "mug__coffee-before-charts": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__signal-over-noise": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__the-network-knows": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__coffee-before-consensus": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__brutus-said-wait": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__market-opens-brutus-judges": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "mug__shield-before-coffee": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.113
+ },
+ "straw-tumbler__wrap": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.127
+ },
+ "desk-mat__brutus": {
+  "tm_in": [
+   0.125,
+   0.188
+  ],
+  "smallest_in": 0.399
+ },
+ "desk-mat__community-signal-command": {
+  "tm_in": [
+   0.125,
+   0.188
+  ],
+  "smallest_in": 0.399
+ },
+ "journal__cover": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.218
+ },
+ "sticker-sheet": {
+  "tm_in": [
+   0.08
+  ],
+  "smallest_in": 0.153
+ }
+}
