@@ -93,9 +93,9 @@ def back_std(name,sub='MERCH'):
     c.text('tradeshieldlabs.com','Medium',120,1800,2420,CY,anchor='c'); c.save(name)
 def left_chest(name,sub='MERCH'):
     c=C(3600,4800,300); c.lockup(3350,700,300,sub,anchor='r'); c.save(name)
-def slogan_front(name,lines,sub='MERCH',size=430,brutus=None,foot=None):
+def slogan_front(name,lines,sub='MERCH',size=430,brutus=None,foot=None,bw=1600):
     c=C(3600,4800,300); y=420
-    if brutus: h=c.image(BRUTUS+brutus,1800-800,y,1600); y+=h+120
+    if brutus: h=c.image(BRUTUS+brutus,1800-bw/2,y,bw); y+=h+120
     y=slogan_lines(c,1800,y,lines,size)
     if foot: y+=60; c.rule(1800,y,1500,26); y+=200; c.text(foot,'SemiBold',120,1800,y,WH,track=0.2,anchor='c'); y+=60
     c.lockup(1800,y+260,330,sub); c.save(name)
@@ -113,7 +113,7 @@ slogan_front('risk-manager-tee__front',[('RISK',W),('MANAGER',CY)],foot='POSITIO
 slogan_front('side-eye-before-buy-tee__front',[('SIDE-EYE',W),('BEFORE BUY',CY)],foot='DUE DILIGENCE, DAILY.',size=440)
 slogan_front('no-dumb-trades-hoodie__front',[('NO DUMB',W),('TRADES',CY)],foot='THINK. VERIFY. TRADE.',size=520)
 slogan_front('brutus-approved-tee__front',[('BRUTUS',W),('APPROVED.',CY)],brutus='brutus-thumbsup-approved.webp',size=380)
-slogan_front('cso-hoodie__front',[('CHIEF SECURITY',W),('OFFICER',CY)],foot='BRUTUS APPROVED',brutus='brutus-cso-portrait.webp',size=330)
+slogan_front('cso-hoodie__front',[('CHIEF SECURITY',W),('OFFICER',CY)],foot='BRUTUS APPROVED',brutus='brutus-cso-portrait.webp',size=300,bw=700)
 slogan_front('ask-shield-iq-tee__front',[('ASK',W),('SHIELD IQ',CY)],foot='ASK. VERIFY. TRADE.',size=520)
 # Shield IQ needs ™: draw slogan with tm
 c=C(3600,4800,300); y=420+capH('ExtraBold',520); c.text('ASK','ExtraBold',520,1800,y,W,anchor='c'); y+=520*0.4+capH('ExtraBold',520); c.text('SHIELD IQ','ExtraBold',520,1800,y,CY,tm=True,anchor='c'); y+=200; c.rule(1800,y,1500,26); y+=200; c.text('ASK. VERIFY. TRADE.','SemiBold',120,1800,y,W,track=0.2,anchor='c'); c.lockup(1800,y+320,330,'MERCH'); c.save('ask-shield-iq-tee__front')
@@ -134,8 +134,9 @@ def emb(name,w,h,ppi,lines=None,sub=None,iconH=None):
     c=C(w,h,ppi)
     if sub: c.lockup(w/2,(h-iconH)/2,iconH,sub)
     else:
-        ih=h*0.8; iw=c.shield(0,0,0) if False else 43/51*ih
-        size=ih*0.38; tws=[width(t,'Bold',size) for t,_ in lines]; tw=iw+ih*0.18+max(tws); x0=(w-tw)/2
+        ih=h*0.62; iw=43/51*ih; size=ih*0.38; tws=[width(t,'Bold',size) for t,_ in lines]; tw=iw+ih*0.18+max(tws)
+        if tw>w*0.7: k=w*0.7/tw; ih*=k; iw*=k; size*=k; tw*=k
+        x0=(w-tw)/2
         c.shield(x0,(h-ih)/2,ih); y=(h-ih)/2+ih*0.12
         for t,col in lines: y+=capH('Bold',size); c.text(t,'Bold',size,x0+iw+ih*0.18,y,col); y+=size*0.42
     c.save(name)
@@ -153,7 +154,7 @@ def mug(name,lines,sub='MERCH',brutus=None,size=150):
     c.lockup(675,170,170,sub); c.tagline(675,460,95)
     x=2025; y=140
     if brutus: c.image(BRUTUS+brutus,x-180,90,360); y=520; size=110
-    slogan_lines(c,x,y,lines,size,fitw=1150)
+    slogan_lines(c,x,y,lines,size,fitw=950)
     c.save(name)
 mug('mug__coffee-before-charts',[('COFFEE',W),('BEFORE',CY),('CHARTS',CY)])
 mug('mug__signal-over-noise',[('SIGNAL',W),('OVER',CY),('NOISE',CY)])
@@ -168,7 +169,7 @@ for cx in (754,2263): c.lockup(cx,200,190,'MERCH'); c.tagline(cx,560,105)
 c.save('straw-tumbler__wrap')
 # ---------- desk mats 853 (9921x5197 @ 310ppi ~ 32x16.8in) ----------
 def mat(name,title,sub,brutus=None):
-    c=C(9921,5197,310); c.lockup(2300,1500,900,sub); c.tagline(2300,2900,330)
+    c=C(9921,5197,310); c.el.append(f'<rect width="9921" height="5197" fill="{NV}"/>'); c.lockup(2300,1500,900,sub); c.tagline(2300,2900,330)
     if brutus: c.image(BRUTUS+brutus,6400,1100,2600)
     else: slogan_lines(c,7300,1700,[(t,col) for t,col in title],520,fitw=4200)
     c.text('tradeshieldlabs.com','Medium',170,9921-500,5197-300,CY,anchor='r'); c.save(name)
@@ -180,8 +181,12 @@ c.lockup(3050,800,330,'MERCH'); c.text('TRADE JOURNAL','Bold',200,3050,1500,CY,t
 c.text('tradeshieldlabs.com','Medium',90,1016,2500,CY,anchor='c'); c.save('journal__cover')
 # ---------- sticker sheet 505 (1750x2482) ----------
 c=C(1750,2482,300)
+for (x,y,w,h) in [(120,110,1510,380),(120,550,1510,380),(120,990,1510,560),(140,1610,640,760),(970,1610,640,760)]: c.el.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="60" fill="{NV}"/>')
 c.lockup(875,180,230,'MERCH'); c.lockup(875,620,230,'NETWORK'); c.tagline(875,1100,120)
 c.image(BRUTUS+'brutus-thumbsup-approved.webp',180,1650,560); c.image(BRUTUS+'brutus-shades-approved.webp',1010,1650,560)
 c.save('sticker-sheet')
+for n in ['no-dumb-trades-hoodie__front','cso-hoodie__front','network-built-for-the-network-hoodie__front','network-network-intelligence-unit-hoodie__front','network-signal-crew-hoodie__front']:
+    im=Image.open(f'{OUT}/{n}.png'); bb=im.getbbox(); art=im.crop(bb); k=min(3200/art.width,2550/art.height,1.0); print(n,"scale",round(k,2)); art=art.resize((int(art.width*k),int(art.height*k)),Image.LANCZOS)
+    sq=Image.new('RGBA',(3600,3600),(0,0,0,0)); sq.alpha_composite(art,((3600-art.width)//2,1000)); sq.save(f'{OUT}/{n.replace("__front","__front_sq")}.png')
 json.dump(LOG,open(OUT+'/tm-log.json','w'),indent=1)
 print(len(LOG),'files; min ™',min(min(v['tm_in']) for v in LOG.values() if v['tm_in']),'in')

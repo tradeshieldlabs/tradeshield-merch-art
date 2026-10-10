@@ -209,23 +209,23 @@
  },
  "cso-hat__front": {
   "tm_in": [],
-  "smallest_in": 0.442
+  "smallest_in": 0.343
  },
  "verified-signal-hat__front": {
   "tm_in": [],
-  "smallest_in": 0.442
+  "smallest_in": 0.343
  },
  "rumor-control-hat__front": {
   "tm_in": [],
-  "smallest_in": 0.442
+  "smallest_in": 0.343
  },
  "stay-aware-hat__front": {
   "tm_in": [],
-  "smallest_in": 0.442
+  "smallest_in": 0.343
  },
  "trucker__brutus-said-wait": {
   "tm_in": [],
-  "smallest_in": 0.442
+  "smallest_in": 0.318
  },
  "puff-hat__front_lockup": {
   "tm_in": [
