@@ -664,18 +664,18 @@
  },
  "puff-hat__front_lockup": {
   "tm_in": [
-   0.127
+   0.1
   ],
-  "smallest_in": 0.293,
+  "smallest_in": 0.231,
   "lockups": [
    {
-    "iconH_in": 0.938,
-    "capH_in": 0.587,
+    "iconH_in": 0.741,
+    "capH_in": 0.463,
     "ratio": 1.6,
-    "gap_in": 0.396,
-    "iconW_in": 0.791,
+    "gap_in": 0.312,
+    "iconW_in": 0.624,
     "gap_ratio": 0.5,
-    "width_in": 6.239,
+    "width_in": 4.923,
     "sub": "#94A3B8",
     "sub_x_eq_word_x": true
    }
@@ -814,6 +814,101 @@
    }
   ]
  },
+ "mug__staff-ceo-buck": {
+  "tm_in": [
+   0.09
+  ],
+  "smallest_in": 0.123,
+  "lockups": [
+   {
+    "iconH_in": 0.392,
+    "capH_in": 0.245,
+    "ratio": 1.6,
+    "gap_in": 0.165,
+    "iconW_in": 0.331,
+    "gap_ratio": 0.5,
+    "width_in": 2.696,
+    "sub": "#94A3B8",
+    "sub_x_eq_word_x": true
+   }
+  ]
+ },
+ "mug__staff-admin": {
+  "tm_in": [
+   0.09
+  ],
+  "smallest_in": 0.123,
+  "lockups": [
+   {
+    "iconH_in": 0.392,
+    "capH_in": 0.245,
+    "ratio": 1.6,
+    "gap_in": 0.165,
+    "iconW_in": 0.331,
+    "gap_ratio": 0.5,
+    "width_in": 2.696,
+    "sub": "#94A3B8",
+    "sub_x_eq_word_x": true
+   }
+  ]
+ },
+ "mug__staff-mod-vibe-checker": {
+  "tm_in": [
+   0.09
+  ],
+  "smallest_in": 0.123,
+  "lockups": [
+   {
+    "iconH_in": 0.392,
+    "capH_in": 0.245,
+    "ratio": 1.6,
+    "gap_in": 0.165,
+    "iconW_in": 0.331,
+    "gap_ratio": 0.5,
+    "width_in": 2.696,
+    "sub": "#94A3B8",
+    "sub_x_eq_word_x": true
+   }
+  ]
+ },
+ "mug__staff-mod-capitulate": {
+  "tm_in": [
+   0.09
+  ],
+  "smallest_in": 0.123,
+  "lockups": [
+   {
+    "iconH_in": 0.392,
+    "capH_in": 0.245,
+    "ratio": 1.6,
+    "gap_in": 0.165,
+    "iconW_in": 0.331,
+    "gap_ratio": 0.5,
+    "width_in": 2.696,
+    "sub": "#94A3B8",
+    "sub_x_eq_word_x": true
+   }
+  ]
+ },
+ "mug__staff-mod-report-fud": {
+  "tm_in": [
+   0.09
+  ],
+  "smallest_in": 0.123,
+  "lockups": [
+   {
+    "iconH_in": 0.392,
+    "capH_in": 0.245,
+    "ratio": 1.6,
+    "gap_in": 0.165,
+    "iconW_in": 0.331,
+    "gap_ratio": 0.5,
+    "width_in": 2.696,
+    "sub": "#94A3B8",
+    "sub_x_eq_word_x": true
+   }
+  ]
+ },
  "straw-tumbler__wrap": {
   "tm_in": [
    0.09
@@ -884,6 +979,45 @@
    }
   ]
  },
+ "founders__hoodie_back_crest": {
+  "tm_in": [
+   0.091,
+   0.11
+  ],
+  "smallest_in": 0.211,
+  "lockups": [
+   {
+    "iconH_in": 0.676,
+    "capH_in": 0.422,
+    "ratio": 1.6,
+    "gap_in": 0.285,
+    "iconW_in": 0.57,
+    "gap_ratio": 0.5,
+    "width_in": 4.493,
+    "sub": "#94A3B8",
+    "sub_x_eq_word_x": true
+   }
+  ]
+ },
+ "founders__hoodie_front_crest": {
+  "tm_in": [
+   0.091
+  ],
+  "smallest_in": 0.211,
+  "lockups": [
+   {
+    "iconH_in": 0.676,
+    "capH_in": 0.422,
+    "ratio": 1.6,
+    "gap_in": 0.285,
+    "iconW_in": 0.57,
+    "gap_ratio": 0.5,
+    "width_in": 4.493,
+    "sub": "#94A3B8",
+    "sub_x_eq_word_x": true
+   }
+  ]
+ },
  "journal__cover": {
   "tm_in": [
    0.09,
@@ -935,6 +1069,25 @@
   ]
  },
  "bold__tee_front_LC": {
+  "tm_in": [
+   0.09
+  ],
+  "smallest_in": 0.189,
+  "lockups": [
+   {
+    "iconH_in": 0.605,
+    "capH_in": 0.378,
+    "ratio": 1.6,
+    "gap_in": 0.255,
+    "iconW_in": 0.51,
+    "gap_ratio": 0.5,
+    "width_in": 4.041,
+    "sub": "#94A3B8",
+    "sub_x_eq_word_x": true
+   }
+  ]
+ },
+ "bold__hoodie_front_LC": {
   "tm_in": [
    0.09
   ],

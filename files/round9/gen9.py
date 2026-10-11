@@ -159,7 +159,7 @@ emb('verified-signal-hat__front',1650,600,300,lines=[('VERIFIED',W),('SIGNAL',CY
 emb('rumor-control-hat__front',1650,600,300,lines=[('RUMOR',W),('CONTROL',CY)])
 emb('stay-aware-hat__front',1650,600,300,lines=[('STAY',W),('AWARE',CY)])
 emb('trucker__brutus-said-wait',1770,600,300,lines=[('BRUTUS SAID',W),('WAIT.',CY)])
-emb('puff-hat__front_lockup',1650,600,300,sub='MERCH',iconH=420)
+emb('puff-hat__front_lockup',1650,600,300,sub='MERCH',iconH=330)
 # ---------- mugs (2700x1050 canvas, Printful 300 area) ----------
 def mug(name,lines,sub='MERCH',brutus=None,size=150):
     c=C(2700,1050,300)
@@ -175,6 +175,11 @@ mug('mug__coffee-before-consensus',[('COFFEE',W),('BEFORE',W),('CONSENSUS.',CY)]
 mug('mug__brutus-said-wait',[('BRUTUS SAID',W),('WAIT.',CY)],brutus='brutus-avatar.png')
 mug('mug__market-opens-brutus-judges',[('MARKET OPENS.',W),('BRUTUS JUDGES.',CY)],brutus='brutus-shades-approved.webp')
 mug('mug__shield-before-coffee',[('CHECK MY',W),('SHIELD BEFORE',CY),('MY COFFEE.',W)],size=130)
+mug('mug__staff-ceo-buck',[('THE BUCK',W),('STOPS AT THE',W),('STOP LOSS.',CY)],size=130)
+mug('mug__staff-admin',[('ADMIN',CY),('KEEPER OF',W),('THE KEYS',W)],size=150)
+mug('mug__staff-mod-vibe-checker',[('MOD',CY),('PROFESSIONAL',W),('VIBE CHECKER',W)],'NETWORK',size=130)
+mug('mug__staff-mod-capitulate',[('I MODERATE',W),("SO YOU DON'T",W),('CAPITULATE.',CY)],'NETWORK',size=120)
+mug('mug__staff-mod-report-fud',[('REPORT FUD.',CY),('NOT',W),('FEELINGS.',W)],'NETWORK',size=140)
 # ---------- straw tumbler 742 (3017x1200) ----------
 c=C(3017,1200,300)
 for cx in (754,2263): c.lockup(cx,200,190,'MERCH'); c.tagline(cx,560,105)
@@ -187,9 +192,26 @@ def mat(name,title,sub,brutus=None):
     c.text('tradeshieldlabs.com','Medium',170,9921-500,5197-300,CY,anchor='r'); c.save(name)
 mat('desk-mat__brutus',None,'MERCH',brutus='brutus-shades-approved.webp')
 mat('desk-mat__community-signal-command',[('COMMUNITY',W),('SIGNAL',W),('COMMAND',CY)],'NETWORK')
+
+# ---------- Founders crest (brand standard: horizontal lockup inside badge, all-cyan tagline) ----------
+def ring(c,cx,cy,r,w,col=CY): c.el.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{col}" stroke-width="{w}"/>')
+c=C(3600,4800,300); cx,cy=1800,1700
+c.el.append(f'<circle cx="{cx}" cy="{cy}" r="1330" fill="{NV}"/>'); ring(c,cx,cy,1330,30); ring(c,cx,cy,1250,8,AC)
+for a in range(0,360,15):
+    import math; x=cx+1290*math.cos(math.radians(a)); y=cy+1290*math.sin(math.radians(a)); c.el.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="9" fill="{CY}"/>')
+c.lockup(cx,820,300,'MERCH')
+fs=430*min(1.0,2050/width('FOUNDERS','ExtraBold',430,0.04)); c.text('FOUNDERS','ExtraBold',fs,cx,1820,WH,track=0.04,anchor='c')
+c.rule(cx,1960,1500,22); c.text('EST. 2026','SemiBold',150,cx,2230,CY,track=0.35,anchor='c')
+c.text('FOUNDING MEMBER','SemiBold',100,cx,2430,AC,track=0.3,anchor='c')
+c.tagline(cx,3260,210); c.save('founders__hoodie_back_crest')
+c=C(3600,4800,300); x0,y0,bw,bh=2050,560,1400,820
+c.el.append(f'<rect x="{x0}" y="{y0}" width="{bw}" height="{bh}" rx="90" fill="{NV}" stroke="{CY}" stroke-width="22"/>')
+c.el.append(f'<rect x="{x0+40}" y="{y0+40}" width="{bw-80}" height="{bh-80}" rx="60" fill="none" stroke="{AC}" stroke-width="6"/>')
+c.lockup(x0+bw/2,y0+130,300,'MERCH'); c.rule(x0+bw/2,y0+520,900,12); c.text('FOUNDERS · EST. 2026','SemiBold',90,x0+bw/2,y0+680,CY,track=0.2,anchor='c')
+c.save('founders__hoodie_front_crest')
 # ---------- journal 867 (4065x2850: back | front) ----------
 c=C(4065,2850,300); c.el.append(f'<rect width="4065" height="2850" fill="{NV}"/>')
-c.lockup(3050,800,330,'MERCH'); c.text('TRADE JOURNAL','Bold',200,3050,1500,CY,track=0.1,anchor='c'); c.tagline(3050,1750,150)
+c.lockup(3050,800,330,'MERCH'); js=200*min(1.0,1150/width('TRADE JOURNAL','Bold',200,0.1)); c.text('TRADE JOURNAL','Bold',js,3050,1500,CY,track=0.1,anchor='c'); c.tagline(3050,1750,150)
 c.text('tradeshieldlabs.com','Medium',90,1016,2500,CY,anchor='c'); c.save('journal__cover')
 # ---------- sticker sheet 505 (1750x2482) ----------
 c=C(1750,2482,300)
@@ -198,10 +220,9 @@ c.lockup(875,180,230,'MERCH'); c.lockup(875,620,230,'NETWORK'); c.tagline(875,11
 c.image(BRUTUS+'brutus-thumbsup-approved.webp',180,1650,560); c.image(BRUTUS+'brutus-shades-approved.webp',1010,1650,560)
 c.save('sticker-sheet')
 for n in ['no-dumb-trades-hoodie__front','cso-hoodie__front','network-built-for-the-network-hoodie__front','network-network-intelligence-unit-hoodie__front','network-signal-crew-hoodie__front']:
-    im=Image.open(f'{OUT}/{n}.png'); bb=im.getbbox(); art=im.crop(bb); k=min(3200/art.width,2550/art.height,1.0); print(n,"scale",round(k,2)); art=art.resize((int(art.width*k),int(art.height*k)),Image.LANCZOS)
-    sq=Image.new('RGBA',(3600,3600),(0,0,0,0)); sq.alpha_composite(art,((3600-art.width)//2,1000)); sq.save(f'{OUT}/{n.replace("__front","__front_sq")}.png')
+    im=Image.open(f'{OUT}/{n}.png'); bb=im.getbbox(); art=im.crop(bb); k=min(2900/art.width,1750/art.height,1.0); print(n,"scale",round(k,2)); art=art.resize((int(art.width*k),int(art.height*k)),Image.LANCZOS)
+    sq=Image.new('RGBA',(3600,3600),(0,0,0,0)); sq.alpha_composite(art,((3600-art.width)//2,3600-art.height-80)); sq.save(f'{OUT}/{n.replace("__front","__front_sq")}.png')
 
-LOG_DONE=True
 print(len(LOG),'files; min ™',min(min(v['tm_in']) for v in LOG.values() if v['tm_in']),'in')
 
 # ---------- BOLD option B (approved 2026-10-11), same overall sizes as round 8 ----------
@@ -210,7 +231,7 @@ def lw(H,sub='MERCH'):
 def Hfor(target): return 300*target/lw(300)
 # left chest ~4in wide (1200px), canvas = full print area
 c=C(3600,4800,300); H=Hfor(1200); c.lockup(3350,450,H,'MERCH',anchor='r'); c.save('bold__tee_front_LC')
-c=C(3600,3600,300); H=Hfor(1200); c.lockup(3590,250,H,'MERCH',anchor='r')  # 78adf88: clear of drawstrings; c.save('bold__hoodie_front_LC')
+c=C(3600,3600,300); H=Hfor(1200); c.lockup(3590,250,H,'MERCH',anchor='r'); c.save('bold__hoodie_front_LC')  # 78adf88: clear of drawstrings
 # back ~11.5in wide lockup, big tagline
 c=C(3600,4800,300); H=Hfor(3450); c.lockup(1800,350,H,'MERCH')
 ts=420*min(1,3000/width('Learn Together.','SemiBold',420)); y=350+H+330; c.tagline(1800,y,ts)
