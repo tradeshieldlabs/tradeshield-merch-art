@@ -1,0 +1,651 @@
+{
+ "LOG": {
+  "nape__icon": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "nape__wordmark": {
+   "tm_in": [
+    17.0
+   ],
+   "smallest_in": 0.286,
+   "lockups": []
+  },
+  "nape__icon_navy": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "nape__wordmark_navy": {
+   "tm_in": [
+    17.0
+   ],
+   "smallest_in": 0.286,
+   "lockups": []
+  },
+  "tee__chest_icon": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "tee__chest_word": {
+   "tm_in": [
+    22.23
+   ],
+   "smallest_in": 0.374,
+   "lockups": []
+  },
+  "tee__chest_word_navy": {
+   "tm_in": [
+    22.23
+   ],
+   "smallest_in": 0.374,
+   "lockups": []
+  },
+  "hoodie__chest_icon": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "hoodie__chest_icon_tonal": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "tee__sleeve_word_navy": {
+   "tm_in": [
+    18.3
+   ],
+   "smallest_in": 0.308,
+   "lockups": []
+  },
+  "hoodie__sleeve_word": {
+   "tm_in": [
+    19.61
+   ],
+   "smallest_in": 0.33,
+   "lockups": []
+  },
+  "founders-A__back": {
+   "tm_in": [],
+   "smallest_in": 0.218,
+   "lockups": []
+  },
+  "founders-B__front": {
+   "tm_in": [],
+   "smallest_in": 0.437,
+   "lockups": []
+  },
+  "admin__back": {
+   "tm_in": [],
+   "smallest_in": 0.291,
+   "lockups": []
+  },
+  "mod__back": {
+   "tm_in": [],
+   "smallest_in": 0.291,
+   "lockups": []
+  },
+  "ceo__back": {
+   "tm_in": [],
+   "smallest_in": 0.291,
+   "lockups": []
+  },
+  "humor-zoom-out__front": {
+   "tm_in": [],
+   "smallest_in": 1.043,
+   "lockups": []
+  },
+  "humor-buy-high__front": {
+   "tm_in": [],
+   "smallest_in": 0.364,
+   "lockups": []
+  },
+  "ndt-A__back": {
+   "tm_in": [],
+   "smallest_in": 0.175,
+   "lockups": []
+  },
+  "ndt-A__front": {
+   "tm_in": [],
+   "smallest_in": 0.364,
+   "lockups": []
+  },
+  "ndt-B__front": {
+   "tm_in": [],
+   "smallest_in": 0.34,
+   "lockups": []
+  },
+  "brutus-objection__front": {
+   "tm_in": [],
+   "smallest_in": 0.364,
+   "lockups": []
+  },
+  "brutus-cso__back": {
+   "tm_in": [],
+   "smallest_in": 0.291,
+   "lockups": []
+  },
+  "polo__chest_icon": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "polo__sleeve_ceo": {
+   "tm_in": [],
+   "smallest_in": 0.485,
+   "lockups": []
+  },
+  "hat-A__front": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "hat-B__front": {
+   "tm_in": [],
+   "smallest_in": 0.728,
+   "lockups": []
+  },
+  "hat-B__back": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "trucker__front": {
+   "tm_in": [],
+   "smallest_in": 0.461,
+   "lockups": []
+  },
+  "mug-core-3am": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-core-coffee": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-core-moon": {
+   "tm_in": [
+    7.92,
+    24.7
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-net-saw-it": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-net-groupchat": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-net-signal": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-brutus-objection": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-brutus-judge": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-brutus-cso": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-gen-candle": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "mug-gen-long-coffee": {
+   "tm_in": [
+    7.92
+   ],
+   "smallest_in": 0.133,
+   "lockups": []
+  },
+  "tumbler-hedged": {
+   "tm_in": [
+    8.64
+   ],
+   "smallest_in": 0.146,
+   "lockups": []
+  },
+  "tumbler-core-check": {
+   "tm_in": [
+    8.64
+   ],
+   "smallest_in": 0.146,
+   "lockups": []
+  },
+  "tumbler-brutus-size": {
+   "tm_in": [
+    8.64
+   ],
+   "smallest_in": 0.146,
+   "lockups": []
+  },
+  "tumbler-net-room": {
+   "tm_in": [
+    8.64
+   ],
+   "smallest_in": 0.146,
+   "lockups": []
+  },
+  "desk-mat__chart": {
+   "tm_in": [
+    15.84
+   ],
+   "smallest_in": 0.267,
+   "lockups": []
+  },
+  "sticker-sheet": {
+   "tm_in": [
+    10.46
+   ],
+   "smallest_in": 0.176,
+   "lockups": []
+  }
+ },
+ "INFO": {
+  "nape__icon": {
+   "place": "label_outside 3x3in",
+   "size_in": [
+    3.0,
+    3.0
+   ],
+   "note": "icon 1.5in tall"
+  },
+  "nape__wordmark": {
+   "place": "label_outside 3x3in",
+   "size_in": [
+    3.0,
+    3.0
+   ],
+   "note": "wordmark 2.6in"
+  },
+  "nape__icon_navy": {
+   "place": "label_outside 3x3in",
+   "size_in": [
+    3.0,
+    3.0
+   ],
+   "note": "icon 1.5in tall"
+  },
+  "nape__wordmark_navy": {
+   "place": "label_outside 3x3in",
+   "size_in": [
+    3.0,
+    3.0
+   ],
+   "note": "wordmark 2.6in"
+  },
+  "tee__chest_icon": {
+   "place": "front left chest",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": "icon"
+  },
+  "tee__chest_word": {
+   "place": "front left chest",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": "word"
+  },
+  "tee__chest_word_navy": {
+   "place": "front left chest",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": "word"
+  },
+  "hoodie__chest_icon": {
+   "place": "front left chest",
+   "size_in": [
+    12.0,
+    12.0
+   ],
+   "note": "icon"
+  },
+  "hoodie__chest_icon_tonal": {
+   "place": "front left chest",
+   "size_in": [
+    12.0,
+    12.0
+   ],
+   "note": "cyan-dark tonal icon (deviation)"
+  },
+  "tee__sleeve_word_navy": {
+   "place": "sleeve 4x3.5in",
+   "size_in": [
+    4.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "hoodie__sleeve_word": {
+   "place": "hoodie left sleeve 3x12in",
+   "size_in": [
+    3.0,
+    12.0
+   ],
+   "note": "wordmark runs down the sleeve"
+  },
+  "founders-A__back": {
+   "place": "back 12x16in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": "10in candlestick chart, micro-labels"
+  },
+  "founders-B__front": {
+   "place": "front 12x12in",
+   "size_in": [
+    12.0,
+    12.0
+   ],
+   "note": "varsity arch"
+  },
+  "admin__back": {
+   "place": "back upper yoke 12in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": "ADMIN"
+  },
+  "mod__back": {
+   "place": "back upper yoke 12in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": "MOD"
+  },
+  "ceo__back": {
+   "place": "back upper yoke 12in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": "CEO"
+  },
+  "humor-zoom-out__front": {
+   "place": "front 12x16in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": ""
+  },
+  "humor-buy-high__front": {
+   "place": "front 12x16in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": ""
+  },
+  "ndt-A__back": {
+   "place": "back 12x16in, 7.3in label",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": ""
+  },
+  "ndt-A__front": {
+   "place": "front left chest",
+   "size_in": [
+    12.0,
+    12.0
+   ],
+   "note": ""
+  },
+  "ndt-B__front": {
+   "place": "front 12x12in",
+   "size_in": [
+    12.0,
+    12.0
+   ],
+   "note": ""
+  },
+  "brutus-objection__front": {
+   "place": "front 12x16in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": "raster Brutus 6in"
+  },
+  "brutus-cso__back": {
+   "place": "back 12x16in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": ""
+  },
+  "polo__chest_icon": {
+   "place": "embroidery_chest_left 4x4in",
+   "size_in": [
+    4.0,
+    4.0
+   ],
+   "note": "icon 1.18in w; K500 thread true cyan"
+  },
+  "polo__sleeve_ceo": {
+   "place": "embroidery sleeve",
+   "size_in": [
+    2.0,
+    3.0
+   ],
+   "note": ""
+  },
+  "hat-A__front": {
+   "place": "embroidery_front_large 5.5x2in",
+   "size_in": [
+    5.5,
+    2.0
+   ],
+   "note": "icon 1.46in w; 1695 Aqua/Teal thread"
+  },
+  "hat-B__front": {
+   "place": "embroidery_front_large",
+   "size_in": [
+    5.5,
+    2.0
+   ],
+   "note": ""
+  },
+  "hat-B__back": {
+   "place": "embroidery_back 2x1in",
+   "size_in": [
+    2.0,
+    1.0
+   ],
+   "note": "icon 0.67in (below 1.25in min \u2014 deviation)"
+  },
+  "trucker__front": {
+   "place": "embroidery_front_large",
+   "size_in": [
+    5.9,
+    2.0
+   ],
+   "note": ""
+  },
+  "mug-core-3am": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-core-coffee": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-core-moon": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-net-saw-it": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-net-groupchat": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-net-signal": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-brutus-objection": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-brutus-judge": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-brutus-cso": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-gen-candle": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "mug-gen-long-coffee": {
+   "place": "mug wrap 7.5x3.08in",
+   "size_in": [
+    9.0,
+    3.5
+   ],
+   "note": ""
+  },
+  "tumbler-hedged": {
+   "place": "tumbler wrap 10x4in",
+   "size_in": [
+    10.06,
+    4.0
+   ],
+   "note": ""
+  },
+  "tumbler-core-check": {
+   "place": "tumbler wrap 10x4in",
+   "size_in": [
+    10.06,
+    4.0
+   ],
+   "note": ""
+  },
+  "tumbler-brutus-size": {
+   "place": "tumbler wrap 10x4in",
+   "size_in": [
+    10.06,
+    4.0
+   ],
+   "note": ""
+  },
+  "tumbler-net-room": {
+   "place": "tumbler wrap 10x4in",
+   "size_in": [
+    10.06,
+    4.0
+   ],
+   "note": ""
+  },
+  "desk-mat__chart": {
+   "place": "desk mat 32x16in full bleed",
+   "size_in": [
+    33.07,
+    17.32
+   ],
+   "note": "border #1F2937 gridlines"
+  },
+  "sticker-sheet": {
+   "place": "sticker sheet 5.83x8.27in",
+   "size_in": [
+    5.83,
+    8.27
+   ],
+   "note": ""
+  }
+ }
+}
