@@ -42,3 +42,8 @@ c=C(3000,3600,300); icon(c,1500,150,360,CY); save(c,'kids__back_nape','back top 
 c=C(1500,525,300); icon(c,750,30,465,CY); save(c,'beanie__front','embroidery_front 5x1.75in','icon 1.31in w')
 c=C(3000,3000,300); candles(c,250,400,2500,1900,n=22,seed=31,trend=1.3); word(c,1500,2700,wsize(3.0),W); save(c,'tote__front','tote front 10x10in')
 json.dump(dict(LOG=LOG,INFO=INFO),open(LOGF,'w'),indent=1); print(len(INFO))
+# ---- inside-print joke (hoodie inside label 2.5x2.5in)
+c=C(750,750,300); icon(c,375,40,200,CY)
+para(c,[('CARE INSTRUCTIONS',W),('wash cold.',W),('tumble dry low.',W),('never panic sell.',CY)],'SemiBold',52,375,300,lh=1.45)
+save(c,'inside__care-joke','label_inside 2.5x2.5in','inside-print punchline')
+json.dump(dict(LOG=LOG,INFO=INFO),open(LOGF,'w'),indent=1)
