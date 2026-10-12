@@ -1,5 +1,5 @@
 import os,json,time,urllib.request,urllib.error,glob
-TOK=os.environ['PRINTFUL_API_TOKEN']; SHA='66166a76b68760959edbe53b042dcbbf9c8c601e'
+TOK=os.environ['PRINTFUL_API_TOKEN']; SHA='0f02cd073b6f9ea28dcfbf78b7bfcccb0a87480d'
 RAW=f'https://raw.githubusercontent.com/tradeshieldlabs/tradeshield-merch-art/{SHA}/files/round10/'
 OUT='/workspace/merch-design-r10/mockups'
 H={'Authorization':'Bearer '+TOK,'X-PF-Store-Id':'18882949','Content-Type':'application/json','User-Agent':'curl/8'}
@@ -8,7 +8,7 @@ def api(path,body=None):
     try: return json.load(urllib.request.urlopen(r,timeout=60))
     except urllib.error.HTTPError as e: raise RuntimeError(f'{e.code} {e.read().decode()[:300]}')
 A={(586,'front'):(1800,2400),(586,'back'):(1800,2400),(586,'label_outside'):(450,450),(586,'sleeve_left'):(600,525),
- (380,'front'):(1800,1800),(380,'back'):(1800,2400),(380,'label_outside'):(450,450),(380,'sleeve_left'):(450,1800),
+ (380,'front'):(1800,1800),(380,'back'):(1800,2400),(380,'label_outside'):(450,450),(380,'sleeve_left'):(450,1800),(380,'label_inside'):(750,750),(356,'front'):(1800,2400),(356,'back'):(1800,2400),(356,'sleeve_left'):(450,1800),(307,'front'):(1500,1800),(307,'back'):(1500,1800),(306,'front'):(1050,1200),(308,'front'):(1050,1200),(533,'front'):(1650,1650),(533,'back'):(1500,1800),(81,'embroidery_front'):(1500,525),(641,'front'):(1500,1500),
  (340,'embroidery_chest_left'):(1200,1200),(340,'embroidery_sleeve_right_top'):(600,900),(206,'embroidery_front_large'):(1650,600),(206,'embroidery_back'):(600,300),
  (422,'embroidery_front_large'):(1770,600),(300,'default'):(2250,925),(742,'default'):(3017,1200),(853,'default'):(9921,5197),(505,'default'):(1750,2482)}
 def pos(pid,pl):
@@ -20,20 +20,20 @@ J=[]
 def tee(lab,v,**pl): J.append((lab,586,v,pl,TG,None))
 def hood(lab,v,**pl): J.append((lab,380,v,pl,HG,None))
 BK,IV,HB,HN=15116,16525,10781,11493
-hood('founders-hoodie-A',HB,front='hoodie__chest_icon',label_outside='nape__wordmark',back='founders-A__back')
+hood('founders-hoodie-A',HB,front='hoodie__chest_icon',back='founders-A__back_nape')
 hood('founders-hoodie-B',HB,front='founders-B__front',label_outside='nape__icon')
 tee('classic-tee-A',BK,front='tee__chest_word',label_outside='nape__icon')
 tee('classic-tee-B',IV,front='tee__chest_icon',label_outside='nape__wordmark_navy',sleeve_left='tee__sleeve_word_navy')
-hood('performance-hoodie',HN,front='hoodie__chest_icon_tonal',label_outside='nape__wordmark',sleeve_left='hoodie__sleeve_word')
-tee('staff-admin-tee',BK,front='tee__chest_icon',label_outside='nape__wordmark',back='admin__back')
-tee('staff-mod-tee',BK,front='tee__chest_icon',label_outside='nape__wordmark',back='mod__back')
-tee('staff-ceo-tee',BK,front='tee__chest_icon',label_outside='nape__wordmark',back='ceo__back')
+hood('performance-hoodie',HN,front='hoodie__chest_icon_tonal',label_outside='nape__wordmark',sleeve_left='hoodie__sleeve_word',label_inside='inside__care-joke')
+tee('staff-admin-tee',BK,front='tee__chest_icon',back='admin__back_nape')
+tee('staff-mod-tee',BK,front='tee__chest_icon',back='mod__back_nape')
+tee('staff-ceo-tee',BK,front='tee__chest_icon',back='ceo__back_nape')
 tee('humor-tee-A-zoom-out',BK,front='humor-zoom-out__front',label_outside='nape__icon')
 tee('humor-tee-B-buy-high',BK,front='humor-buy-high__front',label_outside='nape__icon')
-hood('ndt-hoodie-A',HB,front='ndt-A__front',label_outside='nape__icon',back='ndt-A__back')
+hood('ndt-hoodie-A',HB,front='ndt-A__front',back='ndt-A__back_nape')
 hood('ndt-hoodie-B',HB,front='ndt-B__front',label_outside='nape__icon')
 tee('brutus-objection-tee',BK,front='brutus-objection__front',label_outside='nape__icon')
-hood('brutus-cso-hoodie',HB,front='hoodie__chest_icon',label_outside='nape__wordmark',back='brutus-cso__back')
+hood('brutus-cso-hoodie',HB,front='hoodie__chest_icon',back='brutus-cso__back_nape')
 J.append(('polo',340,9900,dict(embroidery_chest_left='polo__chest_icon'),None,None))
 J.append(('ceo-polo',340,9900,dict(embroidery_chest_left='polo__chest_icon',embroidery_sleeve_right_top='polo__sleeve_ceo'),None,None))
 J.append(('hat-A',206,7857,dict(embroidery_front_large='hat-A__front'),None,None))
@@ -45,6 +45,13 @@ for t in ['hedged','core-check','brutus-size','net-room']:
     J.append(('tumbler-'+t,742,19107,dict(default='tumbler-'+t),None,["Front","Back"]))
 J.append(('desk-mat',853,22327,dict(default='desk-mat__chart'),None,None))
 J.append(('sticker-sheet',505,12917,dict(default='sticker-sheet'),None,None))
+J.append(('long-sleeve-tee',356,10096,dict(front='ls__front',back='ls__back_upper_nape',sleeve_left='ls__sleeve_chart'),["Men's","Men's 2","Flat"],None))
+J.append(('kids-youth-tee',307,10622,dict(front='kids-youth__front',back='kids__back_nape'),["Boy's","Girl's","Flat"],None))
+J.append(('kids-toddler-tee',306,9418,dict(front='kids-toddler__front'),["Boy's","Girl's","Flat"],None))
+J.append(('kids-onesie',308,9439,dict(front='kids-onesie__front'),["Flat","Flat Lifestyle"],None))
+J.append(('kids-hoodie',533,13393,dict(front='kids-hoodie__front',back='kids__back_nape'),["Boy's","Girl's","Flat"],None))
+J.append(('beanie',81,4523,dict(embroidery_front='beanie__front'),None,None))
+J.append(('tote',641,16287,dict(front='tote__front'),None,None))
 import sys
 only=sys.argv[1:]
 print(len(J),'jobs',flush=True)

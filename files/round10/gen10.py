@@ -142,7 +142,7 @@ def mug(name,A,Bs,img=None,pills=None,note='',tmA=False):
         if im: h=c.image(B+im,cx-400,60,800*min(1,900/(800*Image.open(B+im).height/Image.open(B+im).width))); top=60+h+50
         if ptop: top=ptop
         if not spec: return
-        mw=max(width(t,'ExtraBold',1) for t,_ in spec); fs=min(200,1080/mw,(bot-top)/(len(spec)*1.15))
+        mw=max(width(t,'ExtraBold',1) for t,_ in spec); fs=min(190,800/mw,(bot-top)/(len(spec)*1.15))
         tot=capH('ExtraBold',fs)+(len(spec)-1)*fs*1.15; y=top+(bot-top-tot)/2
         for t,col in spec:
             y2=y+capH('ExtraBold',fs); c.text(t,'ExtraBold',fs,cx,y2,col,anchor='c',tm=(t=='Shield IQ')); y+=fs*1.15

@@ -53,6 +53,11 @@
    ],
    "smallest_in": 0.33,
    "lockups": []
+  },
+  "inside__care-joke": {
+   "tm_in": [],
+   "smallest_in": 0.126,
+   "lockups": []
   }
  },
  "INFO": {
@@ -135,6 +140,14 @@
     10.0
    ],
    "note": ""
+  },
+  "inside__care-joke": {
+   "place": "label_inside 2.5x2.5in",
+   "size_in": [
+    2.5,
+    2.5
+   ],
+   "note": "inside-print punchline"
   }
  }
 }
