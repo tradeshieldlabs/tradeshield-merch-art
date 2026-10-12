@@ -164,14 +164,14 @@ mug('mug-gen-long-coffee',[('LONG',CY),('COFFEE.',W)],[('SHORT',CY),('SLEEP.',W)
 # ---------- TUMBLERS (3017x1200 @300 = 10.06x4in wrap) ----------
 def tumb(name,lines,img=None,pills=None,chart=False):
     c=C(3017,1200,300)
-    if chart: candles(c,150,700,1100,400,n=14,seed=2,trend=2)
-    if img: c.image(B+img,200,120,700)
-    para(c,lines,'ExtraBold',150,1508,330,lh=1.2)
+    if chart: candles(c,2200,350,700,500,n=10,seed=2,trend=2)
+    if img: c.image(B+img,2350,250,600)
+    fs=min(150,1150/max(width(t,'ExtraBold',1) for t,_ in lines)); para(c,lines,'ExtraBold',fs,1508,330,lh=1.25)
     for (cx,cy,t,col) in pills or []: pill(c,cx,cy,t,col,80)
     mark(c,1508,1030,60); save(c,name,'tumbler wrap 10x4in')
 tumb('tumbler-hedged',[('HYDRATED',W),('& HEDGED.',CY)],chart=True)
 tumb('tumbler-core-check',[('SAFETY CHECK:',W),('HYDRATION',CY)],pills=[(1508,860,'CLEAR',GR)])
-tumb('tumbler-brutus-size',[('BRUTUS IS WATCHING',W),('YOUR POSITION SIZE.',CY)],img='shades.png')
+tumb('tumbler-brutus-size',[('BRUTUS IS',W),('WATCHING YOUR',W),('POSITION SIZE.',CY)],img='shades.png')
 tumb('tumbler-net-room',[('READ THE ROOM.',W),('THEN THE CHART.',CY)])
 # ---------- DESK MAT (9921x5197 area) ----------
 c=C(9921,5197,300); raw(c,f'<rect width="9921" height="5197" fill="{NV}"/>')
