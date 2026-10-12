@@ -1,0 +1,140 @@
+{
+ "LOG": {
+  "ls__front": {
+   "tm_in": [],
+   "smallest_in": 1.261,
+   "lockups": []
+  },
+  "ls__back_upper": {
+   "tm_in": [
+    26.15
+   ],
+   "smallest_in": 0.44,
+   "lockups": []
+  },
+  "ls__sleeve_chart": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "kids-youth__front": {
+   "tm_in": [],
+   "smallest_in": 0.291,
+   "lockups": []
+  },
+  "kids-toddler__front": {
+   "tm_in": [],
+   "smallest_in": 0.23,
+   "lockups": []
+  },
+  "kids-onesie__front": {
+   "tm_in": [],
+   "smallest_in": 0.534,
+   "lockups": []
+  },
+  "kids-hoodie__front": {
+   "tm_in": [],
+   "smallest_in": 0.315,
+   "lockups": []
+  },
+  "kids__back_nape": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "beanie__front": {
+   "tm_in": [],
+   "smallest_in": null,
+   "lockups": []
+  },
+  "tote__front": {
+   "tm_in": [
+    19.61
+   ],
+   "smallest_in": 0.33,
+   "lockups": []
+  }
+ },
+ "INFO": {
+  "ls__front": {
+   "place": "front 12x16in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": ""
+  },
+  "ls__back_upper": {
+   "place": "back upper hit 4in",
+   "size_in": [
+    12.0,
+    16.0
+   ],
+   "note": "WWE-style small upper-back logo"
+  },
+  "ls__sleeve_chart": {
+   "place": "sleeve 3x12in",
+   "size_in": [
+    3.0,
+    12.0
+   ],
+   "note": "vertical candle strip"
+  },
+  "kids-youth__front": {
+   "place": "youth front 10x12in",
+   "size_in": [
+    10.0,
+    12.0
+   ],
+   "note": "raster Brutus"
+  },
+  "kids-toddler__front": {
+   "place": "toddler front 7x8in",
+   "size_in": [
+    7.0,
+    8.0
+   ],
+   "note": ""
+  },
+  "kids-onesie__front": {
+   "place": "onesie front 7x8in",
+   "size_in": [
+    7.0,
+    8.0
+   ],
+   "note": ""
+  },
+  "kids-hoodie__front": {
+   "place": "kids hoodie front 11x11in",
+   "size_in": [
+    11.0,
+    11.0
+   ],
+   "note": ""
+  },
+  "kids__back_nape": {
+   "place": "back top (kids blanks lack outside-label)",
+   "size_in": [
+    10.0,
+    12.0
+   ],
+   "note": "icon 1.0in"
+  },
+  "beanie__front": {
+   "place": "embroidery_front 5x1.75in",
+   "size_in": [
+    5.0,
+    1.75
+   ],
+   "note": "icon 1.31in w"
+  },
+  "tote__front": {
+   "place": "tote front 10x10in",
+   "size_in": [
+    10.0,
+    10.0
+   ],
+   "note": ""
+  }
+ }
+}
